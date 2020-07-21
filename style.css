@@ -31,21 +31,21 @@ body {
     /*animation: purpleGradientBackground 2s ease infinite;*/
 }
 
-#body-background-image{
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("images/background_image_protest_police_bruatality.jpg");
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 500px; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    opacity: 70%;
-    z-index: -1;
+/*#body-background-image{*/
+/*    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("images/background_image_protest_police_bruatality.jpg");*/
+/*    background-color: #cccccc; !* Used if the image is unavailable *!*/
+/*    height: 500px; !* You must set a specified height *!*/
+/*    background-position: center; !* Center the image *!*/
+/*    background-repeat: no-repeat; !* Do not repeat the image *!*/
+/*    background-size: cover; !* Resize the background image to cover the entire container *!*/
+/*    opacity: 70%;*/
+/*    z-index: -1;*/
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
 
-}
+/*}*/
 
 #cover{
   display: flex;
