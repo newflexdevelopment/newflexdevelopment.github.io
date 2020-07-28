@@ -130,10 +130,17 @@ body {
     text-align: center;
 }
 
-#header, .card, #footer {
+#header, #footer {
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
+}
+
+.card {
+    /*box-shadow:0 -5px  5px rgba(204, 204, 204, 0.8),0 5px  5px rgba(204, 204, 204, 0.8);*/
+    /*-moz-box-shadow:0 -10px  5px rgba(204, 204, 204, 0.8),0 10px  5px rgba(204, 204, 204, 0.8);*/
+    /*-webkit-box-shadow:0 -10px  5px rgba(204, 204, 204, 0.8),0 10px  5px rgba(204, 204, 204, 0.8);*/
+    /*-o-box-shadow:0 -10px  5px rgba(204, 204, 204, 0.8),0 10px  5px rgba(204, 204, 204, 0.8);*/
 }
 
 #logo {
@@ -248,7 +255,8 @@ a:hover, body.dark a:hover {
 /* Add a card effect for articles */
 .card {
     /*background-color: white;*/
-    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
     margin: 50px 20px 50px 20px;
 
 
@@ -256,18 +264,24 @@ a:hover, body.dark a:hover {
 }
 
 .card-title{
-
+    font-size: 12px;
 }
 
 .card-content{
 
 }
 
-/*.card-image{*/
-/*    height: auto;*/
-/*    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Ff%2Fthe-autobiography-of-malcolm%2F30108797%2F&psig=AOvVaw0ktOE9N-GwFSBoujmWn-EA&ust=1595953463614000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPil9ozs7eoCFQAAAAAdAAAAABAJ ");*/
+.card-image{
+    height: auto;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Ff%2Fthe-autobiography-of-malcolm%2F30108797%2F&psig=AOvVaw0ktOE9N-GwFSBoujmWn-EA&ust=1595953463614000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPil9ozs7eoCFQAAAAAdAAAAABAJ ");
+    text-align: center;
+}
 
-/*}*/
+#card-cover-picture{
+    /*height: 400px;*/
+    width: 100%;
+
+}
 /************/
 
 /* FOOTER */
@@ -345,6 +359,15 @@ a:hover, body.dark a:hover {
         width: 100%;
         padding: 0;
     }
+
+    .card {
+    /*background-color: white;*/
+    padding: 1px;
+    margin: 50px 20px 50px 20px;
+
+
+    /*height: 400px;*/
+}
 
     #footer.show {
         padding: 0;
