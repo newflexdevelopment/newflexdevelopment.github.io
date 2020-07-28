@@ -80,3 +80,9 @@ $(function () {
 //     })
 // });
 
+
+function darkMode() {
+    console.log("DARK MODE TOGGLED")
+    $('.logo').toggleClass('active');
+    $('body').toggleClass('dark');
+}
