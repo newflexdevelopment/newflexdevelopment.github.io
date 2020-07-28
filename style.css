@@ -32,7 +32,7 @@ body {
 }
 
 #body-background-image{
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("images/background_image_protest_police_bruatality.jpg");
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("images/background_image_protest_police_bruatality.jpg");
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 500px; /* You must set a specified height */
     background-position: center; /* Center the image */
@@ -40,6 +40,8 @@ body {
     background-size: cover; /* Resize the background image to cover the entire container */
     opacity: 70%;
     z-index: -1;
+
+    margin: 100px 0 100px 0;
 
     display: flex;
     justify-content: center;
@@ -260,6 +262,10 @@ a:hover, body.dark a:hover {
     margin: 50px 20px 50px 20px;
 
 
+    max-width: 670px;
+
+
+
     /*height: 400px;*/
 }
 
@@ -278,7 +284,8 @@ a:hover, body.dark a:hover {
 }
 
 #card-cover-picture{
-    /*height: 400px;*/
+    max-width: 670px;
+    height: 400px;
     width: 100%;
 
 }
@@ -367,6 +374,11 @@ a:hover, body.dark a:hover {
 
 
     /*height: 400px;*/
+}
+    #card-cover-picture{
+    height: 220px;
+    width: 100%;
+
 }
 
     #footer.show {
