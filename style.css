@@ -13,8 +13,8 @@ body {
 
     padding-bottom: 2500px;   /* Height of the page */
 
-    /*font-family: "Lucida Console", Monaco, monospace;*/
-    font-family: generalFont, sans-serif;
+    font-family: "Gill Sans", Monaco, monospace;
+    /*font-family: generalFont, sans-serif;*/
 
     /*background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=2&opacity=49");*/
     /*background: #bdbec2;*/
@@ -32,7 +32,8 @@ body {
 }
 
 #body-background-image{
-    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("images/background_image_protest_police_bruatality.jpg");
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("images/page_cover/fist_haircut.jpg");
+    filter: grayscale(100%);
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 500px; /* You must set a specified height */
     background-position: center; /* Center the image */
@@ -59,8 +60,11 @@ body {
     margin: 1%;
     /*padding: 1%;*/
     text-align: center;
-    font-size: 40px;
+    font-size: 25px;
     color: #1e1c1e;
+    font-family: coverFont;
+    text-transform: capitalize;
+
 
     /*top: 50%;*/
     /*left: 50%;*/
@@ -90,16 +94,16 @@ body {
 /*}*/
 
 @font-face {
-    font-family: generalFont;
-    src: url(files/fonts/VCR_OSD_MONO_1.001.ttf);
-    /*src: url(files/fonts/flesh_wound/Flesh_Wound.ttf);*/
+    font-family: coverFont;
+    src: url(files/fonts/platinum_sign/Platinum_Sign.ttf);
 }
 
-/*@font-face {*/
-/*    font-family: logoFont;*/
-/*    !*src: url(files/fonts/VCR_OSD_MONO_1.001.ttf);*!*/
-/*    src: url(files/fonts/old_london/OldLondon.ttf);*/
-/*}*/
+
+@font-face {
+    font-family: logoFont;
+    /*src: url(files/fonts/VCR_OSD_MONO_1.001.ttf);*/
+    src: url(files/fonts/CloisterBlack.ttf);
+}
 
 
 /************/
@@ -146,7 +150,10 @@ body {
 }
 
 #logo {
-    font-family: logoFont, monospace;
+    /*font-family: logoFont, monospace;*/
+    /*font-weight: lighter;*/
+    /*letter-spacing: 2.5px;*/
+
     z-index: 100;
 }
 
@@ -257,10 +264,11 @@ a:hover, body.dark a:hover {
 /* Add a card effect for articles */
 .card {
     /*background-color: white;*/
+        padding-top: 10%;
+
     padding-left: 15%;
     padding-right: 15%;
-    margin: 50px 20px 50px 20px;
-
+    margin:0 auto;
 
     max-width: 670px;
 
@@ -280,7 +288,7 @@ a:hover, body.dark a:hover {
 .card-image{
     height: auto;
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Ff%2Fthe-autobiography-of-malcolm%2F30108797%2F&psig=AOvVaw0ktOE9N-GwFSBoujmWn-EA&ust=1595953463614000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPil9ozs7eoCFQAAAAAdAAAAABAJ ");
-    text-align: center;
+    /*text-align: center;*/
 }
 
 #card-cover-picture{
@@ -381,6 +389,27 @@ a:hover, body.dark a:hover {
 
 }
 
+    #cover-sentence{
+    margin: 1%;
+    /*padding: 1%;*/
+    text-align: center;
+    font-size: 20px;
+    color: #1e1c1e;
+    font-family: coverFont;
+    text-transform: capitalize;
+
+
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*-ms-transform: translate(-50%, -50%);*/
+    /*transform: translate(-50%, -50%);*/
+    /*opacity: 1;*/
+    /*z-index: 100;*/
+    /*color: rgba(0, 0, 0, 0.97);*/
+
+
+}
+
     #footer.show {
         padding: 0;
     }
@@ -395,6 +424,7 @@ a:hover, body.dark a:hover {
         transform: translate(-50%, -50%);
 
         font-size: 14px;
+        font-weight: lighter;
     }
 }
 /************/
