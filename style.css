@@ -23,6 +23,11 @@ body {
     /*GREEN*/
     /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(232,250,237,1) 46%, rgba(252,252,252,1) 100%);*/
 
+    /*fd0000*/
+
+    /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgb(243, 245, 250) 46%, rgba(252,252,252,1) 100%);*/
+
+
     /*background: linear-gradient(170deg, #ffffff, #ebcef0, #e8b7f0, #ebcef0, #ffffff);*/
     /*background-size: 1000% 1000%;*/
 
@@ -176,14 +181,46 @@ body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.da
     /*transition: 1.0s;*/
 }
 
+body.dark a.read-more-link{
+  display: block;
+    color: #d4cdcd;
+
+}
+
+body.dark a.read-more-link:hover{
+  background-color: #d4cdcd;
+  color: #1e1c1e;
+}
+
+
+
+/*a.read-more-link{*/
+/*    color: darkgray;*/
+/*}*/
+
+a.read-more-link{
+  display: block;
+  color: #000000;
+
+}
+
+a.read-more-link:hover{
+  background-color: #000000;
+    color: white;
+  width: 100px;
+}
+/* The End */
+
+
+
 
 /*LINKS*/
-a:hover, body.dark a:hover {
-    transition: 1s;
+/*a:hover, body.dark a:hover {*/
+/*    transition: 1.5s;*/
 
-    font-weight: bold;
-    font-size: 18px;
-}
+/*    font-weight: bold;*/
+/*    font-size: 18px;*/
+/*}*/
 /************/
 
 /* NAVBAR */
@@ -264,8 +301,8 @@ a:hover, body.dark a:hover {
 /* Add a card effect for articles */
 .card {
     /*background-color: white;*/
-        padding-top: 10%;
-
+    padding-top: 10%;
+    padding-bottom: 10%;
     padding-left: 15%;
     padding-right: 15%;
     margin:0 auto;
@@ -284,18 +321,39 @@ a:hover, body.dark a:hover {
 .card-content{
 
 }
+.card-date{
+    /*font-size: 12px;*/
 
-.card-image{
-    height: auto;
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Ff%2Fthe-autobiography-of-malcolm%2F30108797%2F&psig=AOvVaw0ktOE9N-GwFSBoujmWn-EA&ust=1595953463614000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPil9ozs7eoCFQAAAAAdAAAAABAJ ");
-    /*text-align: center;*/
+    color: darkgray;
 }
 
-#card-cover-picture{
+.card-text{
+        font-size: 16px;
+
+}
+
+
+/*.card-image{*/
+/*    height: auto;*/
+/*    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Ff%2Fthe-autobiography-of-malcolm%2F30108797%2F&psig=AOvVaw0ktOE9N-GwFSBoujmWn-EA&ust=1595953463614000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPil9ozs7eoCFQAAAAAdAAAAABAJ ");*/
+/*    !*text-align: center;*!*/
+/*}*/
+
+.card-cover-picture{
     max-width: 670px;
     height: 400px;
     width: 100%;
 
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+hr.between-cards{
+    border: 0;
+    max-width: 80%;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 /************/
 
@@ -383,7 +441,7 @@ a:hover, body.dark a:hover {
 
     /*height: 400px;*/
 }
-    #card-cover-picture{
+    .card-cover-picture{
     height: 220px;
     width: 100%;
 
