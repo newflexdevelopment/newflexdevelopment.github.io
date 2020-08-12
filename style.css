@@ -163,6 +163,13 @@ body {
 }
 
 
+/*hr.vertical-divider{*/
+/*    border:         none;*/
+/*    border-left:    1px solid hsla(200, 10%, 50%,100);*/
+/*    height:         3vh;*/
+/*    width:          1px;*/
+/*}*/
+
 
 #logo, #navbar, #nav-link-div, .nav-links, #footer, #footer.show {
     /*color: black;*/
@@ -174,7 +181,7 @@ body {
 /************/
 
 /* DARK MODE */
-body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title body.card-content{
+body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title body.card-content body.dark .card-date{
     background-color: #1e1c1e;
     color: #d4cdcd;
 
@@ -183,7 +190,7 @@ body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.da
 
 body.dark a.read-more-link{
   display: block;
-    color: #d4cdcd;
+    color: darkgray;
 
 }
 
@@ -194,13 +201,13 @@ body.dark a.read-more-link:hover{
 
 
 
-/*a.read-more-link{*/
-/*    color: darkgray;*/
-/*}*/
+a.read-more-link{
+width: fit-content;
+}
 
 a.read-more-link{
   display: block;
-  color: #000000;
+    color: darkgray;
 
 }
 
