@@ -342,6 +342,7 @@ a.read-more-link:visited {
 
 .card-date {
     /*font-size: 12px;*/
+  text-decoration: none;
 
     color: darkgray;
 }
