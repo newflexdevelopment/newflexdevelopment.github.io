@@ -10,6 +10,8 @@ body {
     position: relative;
     margin: 0;
     min-height: 100%;
+    width: 100%;
+    min-width: 100%;
 
     padding-bottom: 2500px; /* Height of the page */
 
@@ -334,7 +336,15 @@ body.dark a.read-more-link:hover {
 
 /* RESPONSIVENESS */
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (orientation: portrait) {
+     /* MODAL */
+    .modal-content {
+    margin: auto;
+      display: block;
+      /*width: 90%;*/
+      max-width: 300px;
+        user-select: none;
+}
 
      /* NAVBAR */
     .nav-link-div {
@@ -425,10 +435,11 @@ body.dark a.read-more-link:hover {
 /* POPUP */
 
 
-#myImg {
+#imgLandscape, #imgPortrait {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+    display: none;
 }
 
 #myImg:hover {opacity: 0.7;}
@@ -443,31 +454,28 @@ body.dark a.read-more-link:hover {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  /*overflow: auto; !* Enable scroll if needed *!*/
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modal-content-P {
   margin: auto;
   display: block;
-  width: 90%;
+  /*width: 90%;*/
   max-width: 800px;
     user-select: none;
 }
 
-/* Caption of Modal Image */
-#caption {
+.modal-content-L {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  /*width: 90%;*/
+  max-width: 70%;
+    user-select: none;
 }
+
 
 /* Add Animation */
 .modal-content, #caption {
@@ -492,22 +500,24 @@ body.dark a.read-more-link:hover {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #f1f1f1;
+  color: #d4cdcd;
   font-size: 40px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-  color: #bbb;
+  color: #d4cdcd;
   text-decoration: none;
   cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
+/*@media only screen and (max-width: 700px){*/
+/*  .modal-content {*/
+/*    width: 100%;*/
+/*  }*/
+
+
+/*}*/
