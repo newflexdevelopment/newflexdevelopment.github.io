@@ -199,7 +199,7 @@ p {
 
 .card-title {
     font-size: 22px;
-        font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-style: italic;
 }
@@ -221,6 +221,8 @@ p {
     text-align: justify;
     /*letter-spacing: 0.2px;*/
     line-height: 1.6;
+        font-weight: 400;
+
 }
 
 .card-content::first-letter {

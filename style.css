@@ -61,10 +61,10 @@ body {
 /* FONTS */
 
 
-/*@font-face {*/
-/*    font-family: coverFont;*/
-/*    src: url(files/fonts/platinum_sign/Platinum_Sign.ttf);*/
-/*}*/
+@font-face {
+    font-family: coverFont;
+    src: url(files/fonts/platinum_sign/Platinum_Sign.ttf);
+}
 
 /*@font-face {*/
 /*    font-family: headerFont;*/
@@ -78,13 +78,6 @@ body {
 /*    src: url(files/fonts/Montserrat/Montserrat-Regular.ttf);*/
 /*}*/
 
-h1 {
-    /*font-family: headerFont, sans-serif;*/
-    font-family: Montserrat, sans-serif;
-        font-weight: 600;
-    font-style: italic;
-
-}
 
 body p {
     font-family: 'Montserrat', sans-serif;
@@ -221,6 +214,9 @@ body p {
 
 .card-title {
     font-size: 12px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+    font-style: italic;
 }
 
 .card-date {
