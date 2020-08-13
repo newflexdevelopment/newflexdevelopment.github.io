@@ -7,11 +7,11 @@ html {
 }
 
 body {
-    position:relative;
+    position: relative;
     margin: 0;
     min-height: 100%;
 
-    padding-bottom: 2500px;   /* Height of the page */
+    padding-bottom: 2500px; /* Height of the page */
 
     font-family: "Gill Sans", Monaco, monospace;
     /*font-family: generalFont, sans-serif;*/
@@ -36,8 +36,8 @@ body {
     /*animation: purpleGradientBackground 2s ease infinite;*/
 }
 
-#body-background-image{
-    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("images/page_cover/fist_haircut.jpg");
+#body-background-image {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/page_cover/fist_haircut.jpg");
     filter: grayscale(100%);
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 500px; /* You must set a specified height */
@@ -55,13 +55,13 @@ body {
 
 }
 
-#cover{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#cover-sentence{
+#cover-sentence {
     margin: 1%;
     /*padding: 1%;*/
     text-align: center;
@@ -178,47 +178,58 @@ body {
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
+
 /************/
 
 /* DARK MODE */
-body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title body.card-content body.dark .card-date{
+body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title body.card-content body.dark .card-date {
     background-color: #1e1c1e;
     color: #d4cdcd;
 
     /*transition: 1.0s;*/
 }
 
-body.dark a.read-more-link{
-  display: block;
+body.dark a.read-more-link {
+    display: block;
     color: darkgray;
+    text-decoration: none;
 
 }
 
-body.dark a.read-more-link:hover{
-  background-color: #d4cdcd;
-  color: #1e1c1e;
+body.dark a.read-more-link:hover {
+    background-color: #d4cdcd;
+    color: #1e1c1e;
+    text-decoration: none;
+
 }
 
 
-
-a.read-more-link{
-width: fit-content;
+a.read-more-link {
+    width: fit-content;
+    text-decoration: none;
 }
 
-a.read-more-link{
-  display: block;
+a.read-more-link {
+    display: block;
     color: darkgray;
+    text-decoration: none;
 
 }
 
-a.read-more-link:hover{
-  background-color: #000000;
+a.read-more-link:hover {
+    background-color: #000000;
     color: white;
-  width: 100px;
+    width: 100px;
+    text-decoration: none;
+
 }
+
+a.read-more-link:visited {
+    text-decoration: none;
+
+}
+
 /* The End */
-
-
 
 
 /*LINKS*/
@@ -231,7 +242,7 @@ a.read-more-link:hover{
 /************/
 
 /* NAVBAR */
-#navbar{
+#navbar {
     background-color: #fff;
     z-index: 100;
 }
@@ -246,7 +257,8 @@ a.read-more-link:hover{
 
 .stickyNavLinks {
     visibility: hidden;
-    opacity : 0; transition:opacity 1s;
+    opacity: 0;
+    transition: opacity 1s;
     z-index: 100;
 }
 
@@ -283,7 +295,7 @@ a.read-more-link:hover{
     box-shadow: 0 0 15px #ccc;
 }
 
-.sticky #logo{
+.sticky #logo {
     /*background: yellow;*/
     position: absolute;
     top: 50%;
@@ -312,30 +324,30 @@ a.read-more-link:hover{
     padding-bottom: 10%;
     padding-left: 15%;
     padding-right: 15%;
-    margin:0 auto;
+    margin: 0 auto;
 
     max-width: 670px;
-
 
 
     /*height: 400px;*/
 }
 
-.card-title{
+.card-title {
     font-size: 12px;
 }
 
-.card-content{
+.card-content {
 
 }
-.card-date{
+
+.card-date {
     /*font-size: 12px;*/
 
     color: darkgray;
 }
 
-.card-text{
-        font-size: 16px;
+.card-text {
+    font-size: 16px;
 
 }
 
@@ -346,7 +358,7 @@ a.read-more-link:hover{
 /*    !*text-align: center;*!*/
 /*}*/
 
-.card-cover-picture{
+.card-cover-picture {
     max-width: 670px;
     height: 400px;
     width: 100%;
@@ -356,12 +368,13 @@ a.read-more-link:hover{
     box-shadow: 0 0 10px #ccc;
 }
 
-hr.between-cards{
+hr.between-cards {
     border: 0;
     max-width: 80%;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
 /************/
 
 /* FOOTER */
@@ -381,7 +394,7 @@ hr.between-cards{
     left: 0;
     right: 0;
     width: 100%;
-    height: 7%;   /* Height of the footer */
+    height: 7%; /* Height of the footer */
 
     /*padding: 10px;*/
 
@@ -409,12 +422,12 @@ hr.between-cards{
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
 
-    .sticky{
+    .sticky {
         /*max-height: 7%;*/
-    z-index: 100;
+        z-index: 100;
     }
 
-    .sticky #logo{
+    .sticky #logo {
         /*margin-top: 10px;*/
         /*font-size: 24px;*/
         margin: 0;
@@ -426,54 +439,58 @@ hr.between-cards{
         transform: translate(-50%, -50%);
         z-index: 100;
     }
+
     #navbar.sticky {
         max-height: 7%;
         z-index: 100;
 
     }
-    .nav-link-div{
+
+    .nav-link-div {
         padding-top: 15px;
         z-index: 100;
     }
+
     .leftcolumn {
         width: 100%;
         padding: 0;
     }
 
     .card {
-    /*background-color: white;*/
-    padding: 1px;
-    margin: 50px 20px 50px 20px;
+        /*background-color: white;*/
+        padding: 1px;
+        margin: 50px 20px 50px 20px;
 
 
-    /*height: 400px;*/
-}
-    .card-cover-picture{
-    height: 220px;
-    width: 100%;
+        /*height: 400px;*/
+    }
 
-}
+    .card-cover-picture {
+        height: 220px;
+        width: 100%;
 
-    #cover-sentence{
-    margin: 1%;
-    /*padding: 1%;*/
-    text-align: center;
-    font-size: 20px;
-    color: #1e1c1e;
-    font-family: coverFont;
-    text-transform: capitalize;
+    }
 
-
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*-ms-transform: translate(-50%, -50%);*/
-    /*transform: translate(-50%, -50%);*/
-    /*opacity: 1;*/
-    /*z-index: 100;*/
-    /*color: rgba(0, 0, 0, 0.97);*/
+    #cover-sentence {
+        margin: 1%;
+        /*padding: 1%;*/
+        text-align: center;
+        font-size: 20px;
+        color: #1e1c1e;
+        font-family: coverFont;
+        text-transform: capitalize;
 
 
-}
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*-ms-transform: translate(-50%, -50%);*/
+        /*transform: translate(-50%, -50%);*/
+        /*opacity: 1;*/
+        /*z-index: 100;*/
+        /*color: rgba(0, 0, 0, 0.97);*/
+
+
+    }
 
     #footer.show {
         padding: 0;
@@ -492,6 +509,7 @@ hr.between-cards{
         font-weight: lighter;
     }
 }
+
 /************/
 
 /*EXPERIMENYAL*/
