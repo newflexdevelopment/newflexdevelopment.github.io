@@ -80,7 +80,7 @@ p {
     background: white;
 
     opacity: 0;
-    transition: visibility 0s, opacity 2.5s linear;
+    /*transition: visibility 0s, opacity 2.5s linear;*/
     z-index: 100;
 }
 
