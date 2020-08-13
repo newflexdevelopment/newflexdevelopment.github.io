@@ -13,7 +13,7 @@ body {
 
     /*padding-bottom: 20%; !* Height of the page *!*/
 
-    font-family: textFont, sans-serif;
+    font-family: 'Montserrat', sans-serif, sans-serif;
 
     /*PURPLE*/
     /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(250,230,250,1) 46%, rgba(252,252,252,1) 100%);*/
@@ -60,17 +60,17 @@ body {
 
 /* FONTS */
 @font-face {
-    font-family: textFont;
+    font-family: 'Montserrat', sans-serif;
     /*src: url(files/fonts/VCR_OSD_MONO_1.001.ttf);*/
     src: url(../../files/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
 h1 {
-    font-family: textFont, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 p {
-    font-family: textFont, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /************/
@@ -327,13 +327,7 @@ body.dark a.read-more-link:hover {
 
      /* FONTS */
 
-    h1 {
-    font-family: textFont, sans-serif;
-}
 
-p {
-    font-family: textFont, sans-serif;
-}
 
     /************/
 
