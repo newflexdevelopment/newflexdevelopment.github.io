@@ -13,7 +13,7 @@ body {
 
     /*padding-bottom: 20%; !* Height of the page *!*/
 
-    font-family: 'Montserrat', sans-serif, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
     /*PURPLE*/
     /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(250,230,250,1) 46%, rgba(252,252,252,1) 100%);*/
@@ -63,10 +63,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     /*src: url(files/fonts/VCR_OSD_MONO_1.001.ttf);*/
     src: url(../../files/fonts/Montserrat/Montserrat-Regular.ttf);
-}
-
-h1 {
-    font-family: 'Montserrat', sans-serif;
 }
 
 p {
@@ -202,7 +198,10 @@ p {
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 22px;
+        font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .card-date {
@@ -216,6 +215,12 @@ p {
 .card-caption {
     font-size: 16px;
     color: darkgray;
+}
+
+.card-content{
+    text-align: justify;
+    /*letter-spacing: 0.2px;*/
+    line-height: 1.6;
 }
 
 .card-content::first-letter {
@@ -384,6 +389,10 @@ body.dark a.read-more-link:hover {
         /*height: 400px;*/
     }
 
+    .card-title {
+    font-size: 18px;
+    }
+
     .card-cover-picture {
         height: 220px;
         width: 100%;
@@ -392,8 +401,8 @@ body.dark a.read-more-link:hover {
 
     hr.between-cards {
     border: 0;
-    margin-top: 30%;
-    margin-bottom: 70%;
+    /*margin-top: 30%;*/
+    /*margin-bottom: 70%;*/
 
     max-width: 80%;
     height: 1px;
