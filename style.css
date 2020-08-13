@@ -134,10 +134,16 @@ body p {
 
 #nav-link-div {
     max-height: 16px;
+    word-spacing: 20px;
 
     padding-bottom: 20px;
     transition: visibility 0s, opacity 2.5s ease-in-out;
     z-index: 100;
+}
+
+#two-words-no-space{
+      word-spacing: 0px;
+
 }
 
 .stickyNavLinks {
