@@ -113,7 +113,7 @@ body p {
     z-index: 100;
 }
 
-#logo, #navbar, #nav-link-div, .nav-links, #footer, #footer.show {
+#logo, #navbar, #nav-link-div, .nav-links, #body-background-image, #cover-sentence, .card-date, .card-cover-picture,.read-more-link, #footer, #footer.show{
     /*color: black;*/
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
