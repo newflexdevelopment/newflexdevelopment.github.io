@@ -1,0 +1,407 @@
+* {
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+
+    padding-bottom: 2500px; /* Height of the page */
+
+    font-family: textFont, sans-serif;
+
+    /*PURPLE*/
+    /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(250,230,250,1) 46%, rgba(252,252,252,1) 100%);*/
+    /*GREEN*/
+    /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(232,250,237,1) 46%, rgba(252,252,252,1) 100%);*/
+    /*BLUE*/
+    /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgb(243, 245, 250) 46%, rgba(252,252,252,1) 100%);*/
+}
+
+/* BODY BANNER*/
+
+#body-background-image {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../../images/page_cover/fist_haircut.jpg");
+    filter: grayscale(100%);
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: 70%;
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover-sentence {
+    margin: 1%;
+    text-align: center;
+    font-size: 25px;
+    color: #1e1c1e;
+    font-family: coverFont, serif;
+    text-transform: capitalize;
+}
+
+/************/
+
+/* FONTS */
+@font-face {
+    font-family: textFont;
+    /*src: url(files/fonts/VCR_OSD_MONO_1.001.ttf);*/
+    src: url(../../files/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+h1 {
+    font-family: textFont, sans-serif;
+}
+
+p {
+    font-family: textFont, sans-serif;
+}
+
+/************/
+
+/* HEADER */
+#header {
+    padding: 10px;
+    text-align: center;
+    background: white;
+
+    opacity: 0;
+    transition: visibility 0s, opacity 2.5s linear;
+    z-index: 100;
+}
+
+#header.show {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+    text-align: center;
+}
+
+#header, #footer {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#logo {
+    z-index: 100;
+}
+
+#logo, #navbar, #nav-link-div, .nav-links, #footer, #footer.show {
+    /*color: black;*/
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+/************/
+
+/* NAVBAR */
+#navbar {
+    background-color: #fff;
+    z-index: 100;
+}
+
+/*LINKS*/
+
+#nav-link-div {
+    max-height: 16px;
+
+    padding-bottom: 20px;
+    transition: visibility 0s, opacity 2.5s ease-in-out;
+    z-index: 100;
+}
+
+.stickyNavLinks {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 100;
+}
+
+.nav-links {
+    color: black;
+    font-size: 14px;
+
+    /*text-transform: uppercase;*/
+    text-decoration: none;
+    z-index: 100;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    max-height: 7%;
+    padding-bottom: 20px;
+    transition: visibility 0s, opacity 4.5s linear;
+    z-index: 100;
+
+    -moz-box-shadow: 0 0 15px #ccc;
+    -webkit-box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px #ccc;
+}
+
+.sticky #logo {
+    /*background: yellow;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 -50% 0 0;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    z-index: 100;
+}
+
+/************/
+
+/* CARD */
+/* Add a card effect for articles */
+.card {
+    padding: 10% 15%;
+    margin: 0 auto;
+
+    max-width: 670px;
+    /*height: 400px;*/
+}
+
+.card-cover-picture {
+    max-width: 670px;
+    height: 400px;
+    width: 100%;
+
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-date {
+    /*font-size: 12px;*/
+    text-decoration: none;
+    font-size: 16px;
+
+    color: darkgray;
+}
+
+.card-caption {
+    font-size: 16px;
+    color: darkgray;
+}
+
+.card-content::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+/* READ MORE */
+a.read-more-link {
+    width: fit-content;
+    display: block;
+    color: darkgray;
+    text-decoration: none;
+}
+
+a.read-more-link:hover {
+    background-color: #000000;
+    color: white;
+    width: 100px;
+    text-decoration: none;
+}
+
+a.read-more-link:visited {
+    text-decoration: none;
+}
+
+/* DIVIDER */
+hr.between-cards {
+    border: 0;
+    max-width: 80%;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/************/
+
+/* FOOTER */
+#footer {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 2.5s ease-in-out;
+    background: white;
+    max-height: 7%;
+
+}
+
+#footer.show {
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7%; /* Height of the footer */
+
+    text-align: center;
+
+    visibility: visible;
+    opacity: 1;
+}
+
+#copyright-text {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*SOCIAL MEDIA LINKS*/
+
+/************/
+
+/* DARK MODE */
+body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title body.card-content body.dark .card-date {
+    background-color: #1e1c1e;
+    color: #d4cdcd;
+}
+
+body.dark hr.between-cards {
+    border: 0;
+    max-width: 80%;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(212, 205, 205, 0.75), rgba(0, 0, 0, 0));
+}
+
+body.dark a.read-more-link {
+    display: block;
+    color: darkgray;
+    text-decoration: none;
+}
+
+body.dark a.read-more-link:hover {
+    background-color: #d4cdcd;
+    color: #1e1c1e;
+    text-decoration: none;
+}
+
+/************/
+
+/* RESPONSIVENESS */
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+     /* NAVBAR */
+    .nav-link-div {
+        padding-top: 15px;
+        z-index: 100;
+    }
+
+    #navbar.sticky {
+        max-height: 7%;
+        z-index: 100;
+    }
+
+    .sticky {
+        /*max-height: 7%;*/
+        z-index: 100;
+    }
+
+    .sticky #logo {
+        /*margin-top: 10px;*/
+        /*font-size: 24px;*/
+        margin: 0;
+        /*background: yellow;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+
+    /************/
+
+    /* BANNER */
+        #cover-sentence {
+        margin: 1%;
+        /*padding: 1%;*/
+        text-align: center;
+        font-size: 20px;
+        color: #1e1c1e;
+        font-family: coverFont, sans-serif;
+        text-transform: capitalize;
+    }
+
+    /************/
+
+    /* CARD */
+    .card {
+        padding: 1px;
+        margin: 50px 20px 50px 20px;
+
+        /*height: 400px;*/
+    }
+
+    .card-cover-picture {
+        height: 220px;
+        width: 100%;
+
+    }
+
+    /************/
+
+    /* FOOTER */
+    #footer.show {
+        padding: 0;
+    }
+
+    #copyright-text {
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    /************/
+
+}
+/************/
+
+
+/*EXPERIMENYAL*/
+
+
+
+
