@@ -1,7 +1,18 @@
 // PAGE LOAD
 window.onload = function () {
-    loadHeader()
-    loadPopup()
+    loadHeader();
+    // loadPopup();
+
+    // setCookie("visited", 1, 20);
+
+    if (getCookie('visited') === 'visited' ) {
+        console.log("VISITED")
+    } else {
+        loadPopup();
+        setCookie('visited', 'true', 999); //999 days expiration
+    }
+
+
 };
 
 function loadHeader() {
@@ -72,16 +83,7 @@ $(function () {
     });
 });
 
-
 // DARK MODE
-// $(document).ready(function () {
-//     $('.logo').click(function () {
-//         $('.logo').toggleClass('active');
-//         $('body').toggleClass('dark');
-//     })
-// });
-
-
 function darkMode() {
     console.log("DARK MODE TOGGLED");
     $('.logo').toggleClass('active');
@@ -90,7 +92,6 @@ function darkMode() {
 
 
 // POPUP
-
 function loadPopup() {
 
     // Get the modal
@@ -105,7 +106,7 @@ function loadPopup() {
 
     f();
 
-    function f(){
+    function f() {
         modal.style.display = "block";
 
         // if screen bla
@@ -114,11 +115,10 @@ function loadPopup() {
 
         if (document.documentElement.clientWidth <= 800) {
             modalImgL.src = imgPortrait.src;
-                    console.log("PORTRAIT");
-        }
-        else{
+            // console.log("PORTRAIT");
+        } else {
             modalImgP.src = imgLandscape.src;
-                    console.log("LANDSCAPE");
+            // console.log("LANDSCAPE");
 
         }
 
@@ -129,14 +129,14 @@ function loadPopup() {
     }
 
 // Get the <span> element that closes the modal
-        console.log("PASS");
+//     console.log("PASS");
 
     var span = document.getElementsByClassName("close")[0];
-        console.log("PASS");
+    // console.log("PASS");
 
 // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-        console.log("PASS");
+        // console.log("PASS");
 
         modal.style.display = "none";
         const scrollY = document.body.style.top;
@@ -145,15 +145,54 @@ function loadPopup() {
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     };
 
-    window.onclick = function(event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-        const scrollY = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
 
-      }
+        }
     }
 
 }
+
+// COOKIE
+setCookie = function (c_name, value, exdays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var expires = exdate.toUTCString();
+    var isIE8 = (document.documentMode !== undefined);
+    if (exdays === 0) {
+        expires = (isIE8 === true) ? "" : "0";
+    }
+    var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + expires);
+    document.cookie = c_name + "=" + c_value;
+
+    console.log("Cookie: " + c_name, c_value)
+};
+
+getCookie = function (cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1);
+        if (c.indexOf(name) !== -1) return c.substring(name.length, c.length);
+    }
+    return "";
+};
+
+deleteCookie = function (name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    console.log(document.cookie)
+};
+
+
+// if (getCookie('visited')) {
+//     // deleteCookie('visited');
+//     console.log("ALREADY VISITED")
+// } else {
+//     setCookie('visited', 'true', 999); //999 days expiration
+// }

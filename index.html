@@ -16,70 +16,67 @@
           type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
           rel="stylesheet">
-    <!--    <link rel="manifest" href="files/favicons/cmd_favicon_black_on_white_square/site.webmanifest">-->
     <!--STYLESHEETS-->
     <link href="style.css" rel="stylesheet" type="text/css">
-    <!--    <link rel="stylesheet" type="text/css" href="EXPERIMENTAL.css">-->
 
     <!--JAVASCRIPT-->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script data-auto-a11y="true" src="https://use.fontawesome.com/releases/v5.10.1/js/all.js"></script>
     <script src="script.js"></script>
-    <!--    <script src="EXPERIMENTAL.js"></script>-->
 
 </head>
 <!------------->
 
 <body>
+
+<!-- POPUP -->
+<div>
+    <div>
+        <img id="imgLandscape" src="images/dark_mode_pop_up_anaglyph.png" style="width:100%;max-width:300px">
+        <img id="imgPortrait" src="images/dark_mode_pop_up_anaglyph_portrait.png" style="width:100%;max-width:300px">
+
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="myModal">
+        <span class="close">x</span>
+        <img alt="" class="modal-content-L" id="img01" src="">
+                <img alt="" class="modal-content-P" id="img02" src="">
+
+    </div>
+
+</div>
+
 <!--HEADER-->
 <div class="header" id="header">
     <!--    NAVIGATION BAR-->
     <div id="navbar">
         <h1 class="logo" id="logo" onclick="darkMode()"> <!--onclick="scrollToTop()"-->𝔠𝔬𝔪𝔪𝔞𝔫𝔡𝔪𝔢𝔫𝔱𝔰</h1>
-        <!--        <h1 class="logo" id="logo">COMMANDMENTS</h1>-->
-
         <!--        NAVIGATION LINKS-->
         <div id="nav-link-div">
-            <!--            <ul class="nav-links-list">-->
-            <!--                <li><a class="nav-links" href="#home">home</a></li>-->
-            <!--                <li><a class="nav-links" href="#articles">articles</a></li>-->
-            <!--                <li><a class="nav-links" href="#books">books</a></li>-->
-            <!--                <li><a class="nav-links" href="https://www.instagram.com/commandments.nl/">-->
-            <!--                    &lt;!&ndash;onclick="scrollToBottom()"&ndash;&gt;-->
-            <!--                    about us</a></li>-->
-            <!--            </ul>-->
             <a class="nav-links" href="#home">home</a>
-            <!--            <hr class="vertical-divider">-->
-            <!--            <a class="nav-links" href="#journals">Journals</a>-->
-            <!--            <a class="nav-links" href="#topics">Topics</a>-->
             <a class="nav-links" href="#articles">articles</a>
             <a class="nav-links" href="#books">books</a>
-            <!--            <a class="nav-links" href="#images">Images</a>-->
-            <!--            <a class="nav-links" href="#music">Music</a>-->
-            <!--            <a class="nav-links" href="#projects">Projects</a>-->
-            <!--            <a class="nav-links" href="#tutorials">Tutorials</a>-->
             <a class="nav-links" href="https://www.instagram.com/commandments.nl/" id="two-words-no-space"
                target="_blank">
                 about us</a>
-
-
         </div>
     </div>
 </div>
 <!--BODY-->
 
+<!-- COVER SECTION-->
 <div class="cover-section">
     <div class="100%-width_image" id="body-background-image">
-        <!-- <h1 id="cover-sentence">The future is now</h1>-->
         <div id="cover">
             <h1 id="cover-sentence">SEIZE <br>THE<br> PRESENT</h1>
         </div>
-
     </div>
-
 </div>
 
+<!-- CARD SECTION -->
 
+<!-- SINGLE CARD and DIVIDER -->
 <div class="card">
 
     <div class="card-image">
@@ -100,6 +97,7 @@
 
 <hr class="between-cards">
 
+<!-- SINGLE CARD and DIVIDER -->
 <div class="card">
 
     <div class="card-image">
@@ -119,87 +117,7 @@
     </div>
 </div>
 
-
 <hr class="between-cards">
-
-<!--<div class="card">-->
-
-<!--    <div class="card-image">-->
-<!--&lt;!&ndash;        <img id="card-cover-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKskpvwHAecMTJAExCFrJb-0kLaYTH8cbi5d31qFw41TUVOi8&s">&ndash;&gt;-->
-<!--    </div>-->
-<!--    <div class="card-title">-->
-<!--        <h1>Ego Is The Enemy</h1>-->
-<!--    </div>-->
-<!--    <div class="card-content">-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-<!--<div class="card">-->
-
-<!--    <div class="card-image">-->
-<!--&lt;!&ndash;        <img id="card-cover-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKskpvwHAecMTJAExCFrJb-0kLaYTH8cbi5d31qFw41TUVOi8&s">&ndash;&gt;-->
-<!--    </div>-->
-<!--    <div class="card-title">-->
-<!--        <h1>Brief Answers to the Big Questions</h1>-->
-<!--    </div>-->
-<!--    <div class="card-content">-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-<!--<div class="card">-->
-
-<!--    <div class="card-image">-->
-<!--&lt;!&ndash;        <img id="card-cover-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKskpvwHAecMTJAExCFrJb-0kLaYTH8cbi5d31qFw41TUVOi8&s">&ndash;&gt;-->
-<!--    </div>-->
-<!--    <div class="card-title">-->
-<!--        <h1>How to Be a Stoic: Ancient Wisdom for Modern Living-->
-<!--by </h1>-->
-<!--    </div>-->
-<!--    <div class="card-content">-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--EXPERIMENTAL-->
-
-<!-- POPUP -->
-<div>
-    <div>
-        <img id="imgLandscape" src="images/dark_mode_pop_up_anaglyph.png" style="width:100%;max-width:300px">
-        <img id="imgPortrait" src="images/dark_mode_pop_up_anaglyph_portrait.png" style="width:100%;max-width:300px">
-
-    </div>
-
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <span class="close">x</span>
-        <img alt="" class="modal-content-L" id="img01" src="">
-                <img alt="" class="modal-content-P" id="img02" src="">
-
-    </div>
-
-</div>
-
-
-<!--TEXT WITH CORRECTION-->
-<!--<div id="corrected-text">-->
-<!--<p id="corrected-sentence">Zwarte piet is<br><br> <del>niet </del> <ins> zeker</ins>-->
-<!-- <br><br>racistisch.</p>-->
-<!--</div>-->
-
-<!--TYPING-->
-<!--<div class="wrapper">-->
-<!--    <div class="typing-demo">-->
-<!--      Content coming soon.-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--WAVE PARTICLES-->
-
 
 <!--FOOTER-->
 <div class="footer" id="footer">
@@ -212,12 +130,13 @@
         </div>
         <!--SOCIAL MEDIA LINKS-->
         <div id="social-media-links">
-            <!--            SOCIAL MEDIA LINKS-->
 
         </div>
 
     </footer>
 </div>
+
+<!--EXPERIMENTAL-->
 
 </body>
 </html>
