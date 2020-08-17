@@ -1,7 +1,17 @@
 // PAGE LOAD
 window.onload = function () {
     loadHeader();
-    displayInfo();
+    // loadPopup();
+    DisplayInfo();
+
+    // if (getCookie('visited') === 'visited') {
+    //     console.log("VISITED")
+    // } else {
+    //     loadPopup();
+    //
+    //     setCookie('visited', 'true', 999); //999 days expiration
+    // }
+
 };
 
 function loadHeader() {
@@ -97,13 +107,19 @@ function loadPopup() {
     function f() {
         modal.style.display = "block";
 
+        // if screen bla
+        // modalImg.src = imgLandscape.src;
+
+
         if (document.documentElement.clientWidth <= 800) {
             modalImgL.src = imgPortrait.src;
             // console.log("PORTRAIT");
         } else {
             modalImgP.src = imgLandscape.src;
             // console.log("LANDSCAPE");
+
         }
+
 
         // When the modal is shown, we want a fixed body
         document.body.style.position = 'fixed';
@@ -111,10 +127,15 @@ function loadPopup() {
     }
 
 // Get the <span> element that closes the modal
+//     console.log("PASS");
+
     var span = document.getElementsByClassName("close")[0];
+    // console.log("PASS");
 
 // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
+        // console.log("PASS");
+
         modal.style.display = "none";
         const scrollY = document.body.style.top;
         document.body.style.position = '';
@@ -129,11 +150,43 @@ function loadPopup() {
             document.body.style.position = '';
             document.body.style.top = '';
             window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
         }
-    };
+    }
+
 }
 
 // COOKIE
+setCookie = function (c_name, value, exdays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var expires = exdate.toUTCString();
+    var isIE8 = (document.documentMode !== undefined);
+    if (exdays === 0) {
+        expires = (isIE8 === true) ? "" : "0";
+    }
+    var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + expires);
+    document.cookie = c_name + "=" + c_value;
+
+    console.log("Cookie: " + c_name, c_value)
+};
+
+getCookie = function (cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1);
+        if (c.indexOf(name) !== -1) return c.substring(name.length, c.length);
+    }
+    return "";
+};
+
+deleteCookie = function (name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    console.log(document.cookie)
+};
+
 function getCookieVal(offset) {
     var endstr = document.cookie.indexOf(";", offset);
     if (endstr === -1)
@@ -144,7 +197,7 @@ function getCookieVal(offset) {
 /**
  * @return {null}
  */
-function getCookie(name) {
+function GetCookie(name) {
     var arg = name + "=";
     var alen = arg.length;
     var clen = document.cookie.length;
@@ -160,9 +213,9 @@ function getCookie(name) {
     return null;
 }
 
-function setCookie(name, value) {
-    var argv = setCookie.arguments;
-    var argc = setCookie.arguments.length;
+function SetCookie(name, value) {
+    var argv = SetCookie.arguments;
+    var argc = SetCookie.arguments.length;
     var expires = (2 < argc) ? argv[2] : null;
     var path = (3 < argc) ? argv[3] : null;
     var domain = (4 < argc) ? argv[4] : null;
@@ -174,14 +227,14 @@ function setCookie(name, value) {
         ((secure === true) ? "; secure" : "");
 }
 
-function displayInfo() {
+function DisplayInfo() {
     var expdate = new Date();
     var visit;
     expdate.setTime(expdate.getTime() + (24 * 60 * 60 * 1000 * 365));
-    if (!(visit = getCookie("visit")))
+    if (!(visit = GetCookie("visit")))
         visit = 0;
     visit++;
-    setCookie("visit", visit, expdate, "/", null, false);
+    SetCookie("visit", visit, expdate, "/", null, false);
     var message;
     if (visit === 0 || visit === 1) {
         loadPopup();
@@ -189,9 +242,9 @@ function displayInfo() {
     if (visit > 1) {
         message = "           I see you came back !";
     }
-    if (visit === 5){
+    if (visit === 10){
         console.log("RESET");
-        resetCounts();
+        ResetCounts();
     }
 
     console.log("\n" + "Your browser has visited this page               \n"
@@ -200,11 +253,12 @@ function displayInfo() {
         + message);
 }
 
-function resetCounts() {
+function ResetCounts() {
     var expdate = new Date();
     expdate.setTime(expdate.getTime() + (24 * 60 * 60 * 1000 * 365));
     visit = 0;
-    setCookie("visit", visit, expdate, "/", null, false);
+    SetCookie("visit", visit, expdate, "/", null, false);
     history.go(1);
 }
 
+// window.onload = DisplayInfo;
