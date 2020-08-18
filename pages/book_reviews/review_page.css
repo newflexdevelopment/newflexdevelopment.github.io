@@ -53,7 +53,7 @@ body {
     margin: 1%;
     text-align: center;
     font-size: 25px;
-    color: #1e1c1e;
+    color: #151315;
     font-family: coverFont, serif;
     text-transform: capitalize;
 }
@@ -187,7 +187,7 @@ p {
 /* CARD */
 /* Add a card effect for articles */
 .card {
-    padding: 10% 15%;
+    padding: 5% 15%;
     margin: 0 auto;
 
     max-width: 670px;
@@ -203,6 +203,11 @@ position: relative;          /* where the next element will be automatically pos
     left: 50%;                   /* moves left side of image/element to center of parent element */
     transform: translate(-50%);  /* centers image/element on "left: 50%" position */
 
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+
+
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
@@ -213,7 +218,7 @@ position: relative;          /* where the next element will be automatically pos
     font-family: Montserrat, sans-serif;
     /*font-family: Ransom, sans-serif;*/
     font-weight: 600;
-    font-style: italic;
+    /*font-style: italic;*/
 
     width: 1000px;
     position: relative;          /* where the next element will be automatically positioned */
@@ -332,7 +337,7 @@ hr.between-cards {
 
 /* DARK MODE */
 body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title body.card-content body.dark .card-date {
-    background-color: #1e1c1e;
+    background-color: #151315;
     color: #d4cdcd;
 }
 
@@ -351,7 +356,7 @@ body.dark a.read-more-link {
 
 body.dark a.read-more-link:hover {
     background-color: #d4cdcd;
-    color: #1e1c1e;
+    color: #151315;
     text-decoration: none;
 }
 
@@ -405,7 +410,7 @@ body.dark a.read-more-link:hover {
         /*padding: 1%;*/
         text-align: center;
         font-size: 20px;
-        color: #1e1c1e;
+        color: #151315;
         font-family: coverFont, sans-serif;
         text-transform: capitalize;
     }
