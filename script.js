@@ -1,7 +1,12 @@
 // PAGE LOAD
 window.onload = function () {
+    cookieDarkMode();
+
     loadHeader();
-    displayInfo();
+    cookiePopup();
+    setDarkModeCookie();
+    getDarkModeCookie();
+
 };
 
 function loadHeader() {
@@ -73,11 +78,73 @@ $(function () {
 });
 
 // DARK MODE
-function darkMode() {
-    console.log("DARK MODE TOGGLED");
-    $('.logo').toggleClass('active');
-    $('body').toggleClass('dark');
+
+function cookieDarkMode() {
+    var $body = $('body');
+
+    if ($body.hasClass('dark') == false && Cookies.get("dark mode", {domain: 'localhost'}) === 'true') {
+        console.log("DARK MODE = " + $body.hasClass('dark') + ", should be TRUE so TURN DARK MODE ON ");
+        $body.toggleClass('dark');
+    }
+
+    if ($body.hasClass('dark') == true && Cookies.get("dark mode", {domain: 'localhost'}) === 'false') {
+        console.log("DARK MODE = " + $body.hasClass('dark') + ", should be TRUE so TURN DARK MODE ON ");
+        $body.toggleClass('dark');
+    }
 }
+
+function darkModeFromLastSession() {
+
+}
+
+function darkMode() {
+    // console.log("DARK MODE TOGGLED");
+    var $body = $('body');
+    $body.toggleClass('dark');
+
+    setDarkModeCookie();
+    getDarkModeCookie();
+}
+
+function setDarkModeCookie() {
+    var $body = $('body');
+
+    if ($body.hasClass('dark') == false) {
+        console.log("DARK MODE = " + $body.hasClass('dark'));
+        Cookies.set("dark mode", 'false');
+    }
+
+    if ($body.hasClass('dark') == true) {
+        console.log("DARK MODE = " + $body.hasClass('dark'));
+        Cookies.set("dark mode", 'true');
+    }
+}
+
+function getDarkModeCookie() {
+    if (Cookies.get("dark mode", {domain: 'localhost'}) === 'false') {
+        console.log("DARK MODE COOKIE FALSE");
+    }
+
+    if (Cookies.get("dark mode", {domain: 'localhost'}) === 'true') {
+        console.log("DARK MODE COOKIE TRUE");
+    }
+
+}
+
+
+
+// DARK MODE COOKIE
+
+// function cookieDarkMode() {
+//     if (Cookies.get("toggle") === true ) {
+//                 console.log("DARK MODE ACTIVE");
+//         darkMode();
+//     }
+//     if (Cookies.get("toggle") === false) {
+//                 console.log("DARK MODE NOT ACTIVE");
+//         darkMode();
+//     }
+// }
 
 
 // POPUP
@@ -133,7 +200,7 @@ function loadPopup() {
     };
 }
 
-// COOKIE
+// VISITED? COOKIE
 function getCookieVal(offset) {
     var endstr = document.cookie.indexOf(";", offset);
     if (endstr === -1)
@@ -174,7 +241,7 @@ function setCookie(name, value) {
         ((secure === true) ? "; secure" : "");
 }
 
-function displayInfo() {
+function cookiePopup() {
     var expdate = new Date();
     var visit;
     expdate.setTime(expdate.getTime() + (24 * 60 * 60 * 1000 * 365));
@@ -189,15 +256,15 @@ function displayInfo() {
     if (visit > 1) {
         message = "           I see you came back !";
     }
-    if (visit === 15){
+    if (visit === 15) {
         console.log("RESET");
         resetCounts();
     }
 
-    console.log("\n" + "Your browser has visited this page               \n"
-        + "                              " + visit + "\n"
-        + "                          time(s)." + "\n" + "\n"
-        + message);
+    // console.log("\n" + "Your browser has visited this page               \n"
+    //     + "                              " + visit + "\n"
+    //     + "                          time(s)." + "\n" + "\n"
+    //     + message);
 }
 
 function resetCounts() {
