@@ -292,7 +292,10 @@ hr.between-cards {
     box-shadow: 0 0 10px #ccc;
     user-select: none;
 
+
 }
+
+
 
 a {
     color: #FFFFFF;
@@ -478,6 +481,15 @@ body.dark a.read-more-link:hover {
 
     }
 
+    /************/
+
+    /* COOKIE NOTICE */
+    .wrapper {
+
+    margin: 0 auto;
+    padding: 0 20px;
+        font-size: 12px;
+}
     /************/
 
     /* FOOTER */

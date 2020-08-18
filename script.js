@@ -130,13 +130,11 @@ function getDarkModeCookie() {
 }
 
 
-
-
 // COOKIE NOTICE
 
 function handleCookiesNotice() {
     // When you close the notice
-    $('.js_cookieNotice .js_closeButton').click(function(){
+    $('.js_cookieNotice .js_closeButton').click(function () {
         $(this).closest('.js_cookieNotice').slideUp();
         handleDarkModeNotice();
 
@@ -155,17 +153,28 @@ function handleCookiesNotice() {
     if (!$.cookie('cookieNotice')) {
         $('.js_cookieNotice').slideDown();
 
+
         // When the modal is shown, we want a fixed body
         document.body.style.position = 'fixed';
         document.body.style.top = `-${window.scrollY}px`;
+
+        // document.getElementById("logo").addEventListener("click", function(event){
+        //     event.preventDefault();
+        // });
+
+        $("a").click(function (event) {
+            event.preventDefault();
+        });
+
+
     }
 }
 
 // handleModalNotice
 
 function handleDarkModeNotice() {
-        // When you close the notice
-    $('.close').click(function(){
+    // When you close the notice
+    $('.close').click(function () {
         // Add a cookie so it doesn't show for a year
         $.cookie('darkModeNotice', 1, {
             expires: 365,
@@ -181,10 +190,11 @@ function handleDarkModeNotice() {
 
     }
 }
-$(document).ready(function () {
-  handleCookiesNotice();
 
-  // handleDarkModeNotice();
+$(document).ready(function () {
+    handleCookiesNotice();
+
+    // handleDarkModeNotice();
 });
 
 // DEPENDENCIES
@@ -235,7 +245,8 @@ $(document).ready(function () {
             // If we can't parse the cookie, ignore it, it's unusable.
             s = decodeURIComponent(s.replace(pluses, ' '));
             return config.json ? JSON.parse(s) : s;
-        } catch(e) {}
+        } catch (e) {
+        }
     }
 
     function read(s, converter) {
@@ -258,9 +269,9 @@ $(document).ready(function () {
             return (document.cookie = [
                 encode(key), '=', stringifyCookieValue(value),
                 options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
-                options.path    ? '; path=' + options.path : '',
-                options.domain  ? '; domain=' + options.domain : '',
-                options.secure  ? '; secure' : ''
+                options.path ? '; path=' + options.path : '',
+                options.domain ? '; domain=' + options.domain : '',
+                options.secure ? '; secure' : ''
             ].join(''));
         }
 
@@ -298,7 +309,7 @@ $(document).ready(function () {
 
     $.removeCookie = function (key, options) {
         // Must not alter options, thus extending a fresh object...
-        $.cookie(key, '', $.extend({}, options, { expires: -1 }));
+        $.cookie(key, '', $.extend({}, options, {expires: -1}));
         return !$.cookie(key);
     };
 
