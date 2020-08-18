@@ -1,5 +1,8 @@
 // PAGE LOAD
 window.onload = function () {
+    handleCookiesNotice();
+
+
     cookieDarkMode();
 
     loadHeader();
@@ -130,13 +133,33 @@ function getDarkModeCookie() {
 }
 
 
+function hideNavLinks() {
+    console.log("HIDDEN");
+
+    var navbarLinks = document.getElementById("nav-link-div");
+
+    navbarLinks.style.display = "none";
+
+}
+
+function showNavLinks() {
+    console.log("SHOWN");
+
+    var navbarLinks = document.getElementById("nav-link-div");
+
+    navbarLinks.style.display = "block";
+
+}
+
 // COOKIE NOTICE
 
 function handleCookiesNotice() {
     // When you close the notice
     $('.js_cookieNotice .js_closeButton').click(function () {
         $(this).closest('.js_cookieNotice').slideUp();
+        // showNavLinks();
         handleDarkModeNotice();
+        enableDarkModeToggle();
 
         // const scrollY = document.body.style.top;
         // document.body.style.position = '';
@@ -152,6 +175,9 @@ function handleCookiesNotice() {
     // Only show if it hasn't been closed before
     if (!$.cookie('cookieNotice')) {
         $('.js_cookieNotice').slideDown();
+        // hideNavLinks();
+        disableDarkModeToggle();
+
 
 
         // When the modal is shown, we want a fixed body
@@ -162,11 +188,37 @@ function handleCookiesNotice() {
         //     event.preventDefault();
         // });
 
-        $("a").click(function (event) {
-            event.preventDefault();
-        });
+        // $("a").click(function (event) {
+        //     event.preventDefault();
+        // });
 
 
+    }
+}
+
+function disableDarkModeToggle() {
+    console.log("DISABLED");
+
+    // document.getElementById("logo").addEventListener("click", function (event) {
+    //     event.preventDefault();
+    // });
+
+    var btn = document.getElementById("logo");
+    btn._onclick = btn.onclick;
+    btn.onclick = function () {
+        return false;
+    };
+
+}
+
+
+function enableDarkModeToggle() {
+    console.log("ENABLED");
+
+    var btn = document.getElementById("logo");
+    if (btn._onclick) {
+        btn.onclick = btn._onclick;
+        btn._onclick = null;
     }
 }
 
@@ -191,11 +243,11 @@ function handleDarkModeNotice() {
     }
 }
 
-$(document).ready(function () {
-    handleCookiesNotice();
-
-    // handleDarkModeNotice();
-});
+// $(document).ready(function () {
+//     // handleCookiesNotice();
+//
+//     // handleDarkModeNotice();
+// });
 
 // DEPENDENCIES
 /*!
