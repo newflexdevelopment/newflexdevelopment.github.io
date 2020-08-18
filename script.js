@@ -189,7 +189,7 @@ function displayInfo() {
     if (visit > 1) {
         message = "           I see you came back !";
     }
-    if (visit === 5){
+    if (visit === 15){
         console.log("RESET");
         resetCounts();
     }

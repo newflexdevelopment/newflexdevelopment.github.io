@@ -67,6 +67,11 @@ body {
     src: url(../../files/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
+@font-face {
+    font-family: Ransom;
+    src: url(../../files/fonts/ransom/ransom.ttf);
+}
+
 p {
     font-family: 'Montserrat', sans-serif;
 }
@@ -192,7 +197,11 @@ p {
 .card-cover-picture {
     /*max-width: 670px;*/
     /*height: 400px;*/
-    width: 100%;
+    width: 1000px;
+position: relative;          /* where the next element will be automatically positioned */
+    display: inline-block;       /* causes element width to shrink to fit content */
+    left: 50%;                   /* moves left side of image/element to center of parent element */
+    transform: translate(-50%);  /* centers image/element on "left: 50%" position */
 
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
@@ -200,10 +209,17 @@ p {
 }
 
 .card-title {
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-family: Montserrat, sans-serif;
+    /*font-family: Ransom, sans-serif;*/
     font-weight: 600;
     font-style: italic;
+
+    width: 1000px;
+    position: relative;          /* where the next element will be automatically positioned */
+    display: inline-block;       /* causes element width to shrink to fit content */
+    left: 50%;                   /* moves left side of image/element to center of parent element */
+    transform: translate(-50%);  /* centers image/element on "left: 50%" position */
 }
 
 .card-date {
@@ -228,9 +244,20 @@ p {
 }
 
 .card-content::first-letter {
-    font-size: 200%;
+    /*font-size: 200%;*/
+    /*font-weight: bold;*/
+    float: left;
+    font-size: 80px;
+    line-height: 1;
     font-weight: bold;
+    margin-right: 9px;
+    margin-top: -4px;
+    margin-bottom: -6px;
+    /*color: white;*/
+    /*background-color: black;*/
 }
+
+
 
 /* READ MORE */
 a.read-more-link {
@@ -395,6 +422,7 @@ body.dark a.read-more-link:hover {
 
     .card-title {
     font-size: 18px;
+
     }
 
     .card-cover-picture {
