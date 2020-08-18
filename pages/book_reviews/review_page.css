@@ -198,7 +198,7 @@ p {
     /*max-width: 670px;*/
     /*height: 400px;*/
     width: 1000px;
-position: relative;          /* where the next element will be automatically positioned */
+    position: relative;          /* where the next element will be automatically positioned */
     display: inline-block;       /* causes element width to shrink to fit content */
     left: 50%;                   /* moves left side of image/element to center of parent element */
     transform: translate(-50%);  /* centers image/element on "left: 50%" position */
@@ -427,12 +427,18 @@ body.dark a.read-more-link:hover {
 
     .card-title {
     font-size: 18px;
+            width: 100%;
+    position: relative;          /* where the next element will be automatically positioned */
+    display: inline-block;       /* causes element width to shrink to fit content */
+    left: 50%;                   /* moves left side of image/element to center of parent element */
+    transform: translate(-50%);  /* centers image/element on "left: 50%" position */
 
     }
 
     .card-cover-picture {
         height: 220px;
         width: 100%;
+        max-width: 100%;
 
     }
 
