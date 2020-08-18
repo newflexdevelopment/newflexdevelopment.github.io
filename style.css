@@ -286,40 +286,34 @@ hr.between-cards {
     /*    line-height: 11px;*/
     /*    padding: 9px 40px;*/
     /*}*/
-        -moz-box-shadow: 0 0 10px #ccc;
+
+    -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
-        user-select: none;
+    user-select: none;
 
 }
-    a {
-        color: #FFFFFF;
-        text-decoration: underline;    user-select: none;
 
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    user-select: none;
+}
 
-    }
-
-    .closeButton {
-        position: absolute;
-        right: 26px;
-        top: 50%;
-        transform: translate(0, -50%);
-        text-decoration: none;
-            user-select: none;
-
-
-        /*content: '\f057';*/
-        /*font-family: "FontAwesome", serif;*/
-        color: #FFFFFF;
-        font-size: 20px;
-    }
-
-
+.closeButton {
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-decoration: none;
+    user-select: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
 
 .cookieNotice {
   box-sizing: border-box;
         user-select: none;
-
 }
 
 .hideme {

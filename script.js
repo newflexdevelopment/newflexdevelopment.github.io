@@ -130,25 +130,7 @@ function getDarkModeCookie() {
 }
 
 
-// handleModalNotice
 
-function handleDarkModeNotice() {
-        // When you close the notice
-    $('.close').click(function(){
-        // Add a cookie so it doesn't show for a year
-        $.cookie('darkModeNotice', 1, {
-            expires: 365,
-            path: '/'
-        });
-    });
-    // Only show if it hasn't been closed before
-    if (!$.cookie('darkModeNotice')) {
-        loadPopup();
-        // When the modal is shown, we want a fixed body
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${window.scrollY}px`;
-    }
-}
 
 // COOKIE NOTICE
 
@@ -156,10 +138,12 @@ function handleCookiesNotice() {
     // When you close the notice
     $('.js_cookieNotice .js_closeButton').click(function(){
         $(this).closest('.js_cookieNotice').slideUp();
-        const scrollY = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        handleDarkModeNotice();
+
+        // const scrollY = document.body.style.top;
+        // document.body.style.position = '';
+        // document.body.style.top = '';
+        // window.scrollTo(0, parseInt(scrollY || '0') * -1);
 
         // Add a cookie so it doesn't show for a year
         $.cookie('cookieNotice', 1, {
@@ -177,9 +161,30 @@ function handleCookiesNotice() {
     }
 }
 
+// handleModalNotice
+
+function handleDarkModeNotice() {
+        // When you close the notice
+    $('.close').click(function(){
+        // Add a cookie so it doesn't show for a year
+        $.cookie('darkModeNotice', 1, {
+            expires: 365,
+            path: '/'
+        });
+    });
+    // Only show if it hasn't been closed before
+    if (!$.cookie('darkModeNotice')) {
+        // When the modal is shown, we want a fixed body
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${window.scrollY}px`;
+        loadPopup();
+
+    }
+}
 $(document).ready(function () {
   handleCookiesNotice();
-  handleDarkModeNotice();
+
+  // handleDarkModeNotice();
 });
 
 // DEPENDENCIES
