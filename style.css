@@ -13,7 +13,7 @@ body {
     width: 100%;
     min-width: 100%;
 
-    padding-bottom: 2500px; /* Height of the page */
+    padding-bottom: 20%; /* Height of the page */
 
     font-family: 'Montserrat', sans-serif;
 
@@ -147,6 +147,12 @@ body p {
 
 }
 
+.v1{
+  /*    border-left: 6px solid green;*/
+  /*height: 10px;*/
+  /*  width: 5px;*/
+}
+
 .stickyNavLinks {
     visibility: hidden;
     opacity: 0;
@@ -206,7 +212,7 @@ body p {
 
 .card-cover-picture {
     max-width: 670px;
-    height: 400px;
+    height: 370px;
     width: 100%;
 
     -moz-box-shadow: 0 0 10px #ccc;
@@ -219,6 +225,25 @@ body p {
         font-family: Montserrat, sans-serif;
         font-weight: 600;
     font-style: italic;
+
+}
+
+.card-title-link{
+        /*font-size: 24px;*/
+        font-family: Montserrat, sans-serif;
+        /*font-weight: 600;*/
+    font-style: italic;
+    text-decoration: none;
+    color: black;
+
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
 }
 
 .card-date {
@@ -276,6 +301,7 @@ hr.between-cards {
     width: 100%;
     background: #000000;
     color: #FFFFFF;
+    opacity: 0.9;
     text-align: center;
     line-height: 17px;
     padding: 12px 73px;
@@ -287,9 +313,9 @@ hr.between-cards {
     /*    padding: 9px 40px;*/
     /*}*/
 
-    -moz-box-shadow: 0 0 10px #ccc;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc;
+    /*-moz-box-shadow: 0 0 10px #ccc;*/
+    /*-webkit-box-shadow: 0 0 10px #ccc;*/
+    /*box-shadow: 0 0 10px #ccc;*/
     user-select: none;
 
 
@@ -297,7 +323,7 @@ hr.between-cards {
 
 
 
-a {
+.cookieNotice a {
     color: #FFFFFF;
     text-decoration: underline;
     user-select: none;
@@ -385,7 +411,7 @@ a {
 /************/
 
 /* DARK MODE */
-body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title body.card-content body.dark .card-date {
+body.dark, body.dark #header, body.dark #navbar, body.dark #footer.show, body.dark .nav-links, body.dark #footer body.card body.card-title, body.card-title-link, body.card-content body.dark .card-date {
     background-color: #151315;
     color: #d4cdcd;
 }
@@ -403,6 +429,12 @@ body.dark a.read-more-link {
     text-decoration: none;
 }
 
+body.dark a.card-title-link {
+    display: block;
+    color: darkgray;
+    text-decoration: none;
+}
+
 body.dark a.read-more-link:hover {
     background-color: #d4cdcd;
     color: #151315;
@@ -414,6 +446,12 @@ body.dark a.read-more-link:hover {
 /* RESPONSIVENESS */
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) and (orientation: portrait) {
+
+        body {
+        padding-bottom: 200px; /* Height of the page */
+    }
+
+
      /* MODAL */
     .modal-content {
     margin: auto;
@@ -519,8 +557,6 @@ body.dark a.read-more-link:hover {
 
 
 /* POPUP */
-
-
 #imgLandscape, #imgPortrait {
   border-radius: 5px;
   cursor: pointer;
@@ -604,6 +640,6 @@ body.dark a.read-more-link:hover {
 /*  .modal-content {*/
 /*    width: 100%;*/
 /*  }*/
-
-
 /*}*/
+
+/************/

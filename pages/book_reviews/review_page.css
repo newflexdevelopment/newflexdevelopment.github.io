@@ -13,7 +13,7 @@ body {
     width: 100%;
     min-width: 100%;
 
-    /*padding-bottom: 20%; !* Height of the page *!*/
+    padding-bottom: 20%; /* Height of the page */
 
     font-family: 'Montserrat', sans-serif;
 
@@ -106,7 +106,7 @@ p {
     z-index: 100;
 }
 
-#logo, #navbar, #nav-link-div, .nav-links, #body-background-image, #cover-sentence, .card-date, .card-cover-picture,.read-more-link, #footer, #footer.show{
+#logo, #navbar, #nav-link-div, .nav-links, #body-background-image, #cover-sentence, .card-date, .card-cover-picture, .read-more-link, #footer, #footer.show {
     /*color: black;*/
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
@@ -133,10 +133,11 @@ p {
     z-index: 100;
 }
 
-#two-words-no-space{
-      word-spacing: 0px;
+#two-words-no-space {
+    word-spacing: 0px;
 
 }
+
 .stickyNavLinks {
     visibility: hidden;
     opacity: 0;
@@ -198,14 +199,13 @@ p {
     /*max-width: 670px;*/
     /*height: 400px;*/
     width: 1000px;
-    position: relative;          /* where the next element will be automatically positioned */
-    display: inline-block;       /* causes element width to shrink to fit content */
-    left: 50%;                   /* moves left side of image/element to center of parent element */
-    transform: translate(-50%);  /* centers image/element on "left: 50%" position */
+    position: relative; /* where the next element will be automatically positioned */
+    display: inline-block; /* causes element width to shrink to fit content */
+    left: 50%; /* moves left side of image/element to center of parent element */
+    transform: translate(-50%); /* centers image/element on "left: 50%" position */
 
-        margin-top: 50px;
-        margin-bottom: 50px;
-
+    margin-top: 50px;
+    margin-bottom: 50px;
 
 
     -moz-box-shadow: 0 0 10px #ccc;
@@ -221,10 +221,10 @@ p {
     /*font-style: italic;*/
 
     width: 1000px;
-    position: relative;          /* where the next element will be automatically positioned */
-    display: inline-block;       /* causes element width to shrink to fit content */
-    left: 50%;                   /* moves left side of image/element to center of parent element */
-    transform: translate(-50%);  /* centers image/element on "left: 50%" position */
+    position: relative; /* where the next element will be automatically positioned */
+    display: inline-block; /* causes element width to shrink to fit content */
+    left: 50%; /* moves left side of image/element to center of parent element */
+    transform: translate(-50%); /* centers image/element on "left: 50%" position */
 }
 
 .card-date {
@@ -240,11 +240,11 @@ p {
     color: darkgray;
 }
 
-.card-content{
+.card-content {
     text-align: justify;
     /*letter-spacing: 0.2px;*/
     line-height: 1.6;
-        font-weight: 400;
+    font-weight: 400;
 
 }
 
@@ -261,7 +261,6 @@ p {
     /*color: white;*/
     /*background-color: black;*/
 }
-
 
 
 /* READ MORE */
@@ -287,7 +286,7 @@ a.read-more-link:visited {
 hr.between-cards {
     border: 0;
     margin-top: 10%;
-    margin-bottom: 30%;
+    /*margin-bottom: 30%;*/
 
     max-width: 80%;
     height: 1px;
@@ -295,6 +294,84 @@ hr.between-cards {
 }
 
 /************/
+
+
+/* COOKIE NOTICE */
+.cookieNotice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000000;
+    color: #FFFFFF;
+    opacity: 0.9;
+    text-align: center;
+    line-height: 17px;
+    padding: 12px 73px;
+    font-size: 12px;
+
+    /*@media  {*/
+    /*    font-size: 10px;*/
+    /*    line-height: 11px;*/
+    /*    padding: 9px 40px;*/
+    /*}*/
+
+    /*-moz-box-shadow: 0 0 10px #ccc;*/
+    /*-webkit-box-shadow: 0 0 10px #ccc;*/
+    /*box-shadow: 0 0 10px #ccc;*/
+    user-select: none;
+
+
+}
+
+
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    user-select: none;
+}
+
+.closeButton {
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-decoration: none;
+    user-select: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.cookieNotice {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.hideme {
+    display: none;
+}
+
+/*@wrapper_width: 1192px;*/
+/*@mobile_width: 640px;*/
+
+/*@desktop: ~"all and (min-width: 1192px)";*/
+/*@tablet: ~"all and (min-width: 641px) and (max-width: @{wrapper_width})";*/
+/*@mobile: ~"all and (max-width: @{mobile_width})";*/
+
+
+.wrapper {
+
+    /*max-width: @wrapper_width;*/
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*html, body {*/
+/*  margin: 0;*/
+/*}*/
+
+/************/
+
 
 /* FOOTER */
 #footer {
@@ -362,18 +439,117 @@ body.dark a.read-more-link:hover {
 
 /************/
 
+/* POPUP */
+
+
+#imgLandscape, #imgPortrait {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /*overflow: auto; !* Enable scroll if needed *!*/
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content-P {
+    margin: auto;
+    display: block;
+    /*width: 90%;*/
+    max-width: 800px;
+    user-select: none;
+}
+
+.modal-content-L {
+    margin: auto;
+    display: block;
+    /*width: 90%;*/
+    max-width: 70%;
+    user-select: none;
+}
+
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    /*font-weight: bold;*/
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #d4cdcd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+/*@media only screen and (max-width: 700px){*/
+/*  .modal-content {*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
+
+/************/
+
 /* RESPONSIVENESS */
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) and (orientation: portrait) {
+@media screen and (max-width: 800px) and (orientation: portrait)  {
 
-     /* FONTS */
+        body {
+        padding-bottom: 200px; /* Height of the page */
+    }
 
-
-
+    /* FONTS */
     /************/
-
-
-     /* NAVBAR */
+    /* NAVBAR */
     .nav-link-div {
         padding-top: 15px;
         z-index: 100;
@@ -403,9 +579,8 @@ body.dark a.read-more-link:hover {
     }
 
     /************/
-
     /* BANNER */
-        #cover-sentence {
+    #cover-sentence {
         margin: 1%;
         /*padding: 1%;*/
         text-align: center;
@@ -416,7 +591,6 @@ body.dark a.read-more-link:hover {
     }
 
     /************/
-
     /* CARD */
     .card {
         padding: 1px;
@@ -426,12 +600,12 @@ body.dark a.read-more-link:hover {
     }
 
     .card-title {
-    font-size: 18px;
-            width: 100%;
-    position: relative;          /* where the next element will be automatically positioned */
-    display: inline-block;       /* causes element width to shrink to fit content */
-    left: 50%;                   /* moves left side of image/element to center of parent element */
-    transform: translate(-50%);  /* centers image/element on "left: 50%" position */
+        font-size: 18px;
+        width: 100%;
+        position: relative; /* where the next element will be automatically positioned */
+        display: inline-block; /* causes element width to shrink to fit content */
+        left: 50%; /* moves left side of image/element to center of parent element */
+        transform: translate(-50%); /* centers image/element on "left: 50%" position */
 
     }
 
@@ -443,17 +617,16 @@ body.dark a.read-more-link:hover {
     }
 
     hr.between-cards {
-    border: 0;
-    /*margin-top: calc(100px + 7%);*/
-    /*margin-bottom: 200px;*/
+        border: 0;
+        /*margin-top: calc(100px + 7%);*/
+        /*margin-bottom: 200px;*/
         margin-top: 100px;
         margin-bottom: 200px;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
 
     /************/
-
     /* FOOTER */
     #footer.show {
         padding: 0;
@@ -471,9 +644,11 @@ body.dark a.read-more-link:hover {
         font-size: 14px;
         font-weight: lighter;
     }
+
     /************/
 
 }
+
 /************/
 
 
