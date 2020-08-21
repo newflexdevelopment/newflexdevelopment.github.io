@@ -126,6 +126,7 @@ body p {
 /************/
 
 /* VERTICAL DIVIDER NAVBAR */
+
 /*ul {*/
 /*    list-style-type: none;*/
 /*    margin: 0;*/
@@ -165,6 +166,8 @@ body p {
 
 /*}*/
 
+/************/
+
 
 
 /* NAVBAR */
@@ -177,17 +180,17 @@ body p {
 
 #nav-link-div {
     max-height: 16px;
-    /*word-spacing: 20px;*/
+    word-spacing: 20px;
 
     padding-bottom: 20px;
     transition: visibility 0s, opacity 2.5s ease-in-out;
     z-index: 100;
 }
 
-/*#two-words-no-space{*/
-/*      word-spacing: 0px;*/
+#two-words-no-space{
+      word-spacing: 0px;
 
-/*}*/
+}
 
 .v1{
   /*    border-left: 6px solid green;*/
