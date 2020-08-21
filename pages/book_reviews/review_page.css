@@ -327,7 +327,7 @@ hr.between-cards {
 
 a {
     color: #FFFFFF;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     user-select: none;
 }
 

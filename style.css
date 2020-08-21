@@ -192,12 +192,6 @@ body p {
 
 }
 
-.v1{
-  /*    border-left: 6px solid green;*/
-  /*height: 10px;*/
-  /*  width: 5px;*/
-}
-
 .stickyNavLinks {
     visibility: hidden;
     opacity: 0;
@@ -370,7 +364,7 @@ hr.between-cards {
 
 .cookieNotice a {
     color: #FFFFFF;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     user-select: none;
 }
 
@@ -476,7 +470,7 @@ body.dark a.read-more-link {
 
 body.dark a.card-title-link {
     display: block;
-    color: darkgray;
+    color: #d4cdcd;
     text-decoration: none;
 }
 
@@ -688,3 +682,24 @@ body.dark a.read-more-link:hover {
 /*}*/
 
 /************/
+
+
+/* COLUMNS */
+
+    {
+        /*box-sizing: border-box;*/
+    }
+    /* Set additional styling options for the columns*/
+/*    .column {*/
+/*    float: left;*/
+/*    width: 50%;*/
+/*!*padding: 5px;*!*/
+/*        text-align: center;*/
+
+/*    }*/
+
+/*    .row:after {*/
+/*    content: "";*/
+/*    display: table;*/
+/*    clear: both;*/
+/*    }*/
