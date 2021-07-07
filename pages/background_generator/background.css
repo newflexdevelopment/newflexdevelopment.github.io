@@ -13,8 +13,13 @@
 /*    left: 0;*/
 /*}*/
 
+body{
+  background-color: rgba(0, 0, 0, 0.99);
+}
+
 .square {
-background-image: radial-gradient(circle, #ff1200, #ff4c35, #ff6e5b, #f98c7e, #eda79f, #e9b3a1, #e4bfa8, #dfcab4, #d1d0a7, #afdaab, #79e2c7, #01e6f5);
+background-image: radial-gradient(circle, #bfbfd9, #b4b4cc, #aaaabf, #9f9fb3, #9595a6, #888898, #7c7c8b, #70707e, #5f5f6d, #4f4f5c, #40404c, #31313c);
+
   width: 50%;
 
 }

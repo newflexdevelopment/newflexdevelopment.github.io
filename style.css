@@ -627,6 +627,7 @@ body.dark a.read-more-link:hover {
   /*width: 90%;*/
   max-width: 800px;
     user-select: none;
+    /*opacity: 0.9;*/
 }
 
 .modal-content-L {
